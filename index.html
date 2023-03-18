@@ -484,21 +484,29 @@
           </ul>
         </div>
         <div class="footer-subscribe">
-          <p class="footer-subscribe-title">Subscribe</p>
-          <form class="contact-form">
-            <div class="form-group">
-              <textarea
-                name="email"
-                class="contact-form-textarea"
+          <form class="subscribe-form">
+            <label class="footer-subscribe-title">Subscribe</label>
+
+            <div class="subscribe-field">
+              <input
+                class="subscribe-input input-text"
+                type="email"
                 placeholder="E-mail"
-              ></textarea>
+                name="email"
+                type="E-mail"
+                required
+              />
+              <button type="submit" class="subscribe-form-button">
+                Subscribe<svg
+                  class="subscribe-form-icon"
+                  width="24px"
+                  height="24px"
+                >
+                  <use href="./images/airplane-defs.svg#icon-airplane"></use>
+                </svg>
+              </button>
             </div>
           </form>
-          <button type="submit" class="contact-form-button">
-            Subscribe<svg class="contact-form-icon" width="24px" height="24px">
-              <use href="./images/airplane-defs.svg#icon-airplane"></use>
-            </svg>
-          </button>
         </div>
       </div>
     </footer>
@@ -512,6 +520,32 @@
         <h2 class="modal-title">
           Leave your contacts and we will call you back
         </h2>
+        <form class="modal-form form">
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Name"
+            name="fullname"
+            required
+          />
+          <input
+            type="tel"
+            class="form-input"
+            placeholder="Phone"
+            name="phone"
+            pattern="^\+?3?8?(0\d{9})$"
+            required
+          />
+          <input
+            type="email"
+            class="form-input"
+            placeholder="Email"
+            name="email"
+            required
+           
+          />
+          <button type="submit" class="modal-button">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

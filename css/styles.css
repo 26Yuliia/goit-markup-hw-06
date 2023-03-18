@@ -25,6 +25,8 @@
   --footer-media-title-color: #ffffff;
   --team-background-color: #4d5ae5;
   --team-hover-background-color: #404bbf;
+  --modal-border-color: rgba(46, 47, 66, 1);
+  --placeholder-color: rgba(142, 143, 153, 1);
 }
 h1,
 h2,
@@ -371,11 +373,7 @@ img {
 .social-list-link:focus {
   background-color: var(--team-hover-background-color);
 }
-/*
-.social-media-icon {
-  fill: #f4f4fd;
-}
-*/
+
 .social-list {
   display: flex;
   justify-content: center;
@@ -510,11 +508,15 @@ img {
 .footer-media-link:hover,
 .footer-media-link:focus {
   background-color: aquamarine;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-subscribe {
-  /* margin-right: 192px;*/
+  display: flex;
+  gap: 24px;
+  margin-left: 72px;
+}
+
+.subscribe-form {
 }
 
 .footer-subscribe-title {
@@ -524,14 +526,45 @@ img {
   letter-spacing: 0.02em;
   color: var(--footer-media-title-color);
 }
-.contact-form-textarea {
-  background-color: var(--background-footer-color);
+.subscribe-input {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
   border: 1px solid var(--footer-media-title-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  padding: 8px 24px;
-  text-align: left;
+  outline: transparent;
+  padding: 8px 16px;
+
+  font-size: 12px;
+  line-height: 2;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: var(--footer-media-title-color);
 }
-.contact-form-button {
+
+.input-text {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-field {
+  color: #ffffff;
+  margin-top: 16px;
+  display: flex;
+  gap: 24px;
+}
+
+.input-text::placeholder {
+  color: var(--footer-active-color);
+}
+
+.input-text:focus::placeholder {
+  color: var(--footer-active-color);
+}
+
+.subscribe-form-button {
+  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -551,8 +584,8 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-form-button:hover,
-.contact-form-button:focus {
+.subscribe-form-button:hover,
+.subscribe-form-button:focus {
   background: var(--active-color);
 }
 
@@ -769,4 +802,55 @@ img {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   margin-top: 72px;
+}
+
+.modal-form {
+  margin: 0 24px;
+}
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  border: none;
+  padding: 14px 19px;
+  margin-bottom: 20px;
+}
+
+.form-input:hover {
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+.form-input::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--placeholder-color);
+}
+.modal-button {
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 169px;
+  height: 56px;
+
+  color: var(--secondary-font-color);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  border-radius: 4px;
+  padding: 16px 32px 16px 32px;
+  margin: 0 auto;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:hover {
+  background: var(--hovet-background-color);
 }
